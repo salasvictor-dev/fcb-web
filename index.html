@@ -16,19 +16,58 @@
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
             rel="stylesheet"
         />
         <!-- FONT-->
         <link rel="stylesheet" href="./styles/styles.css" />
     </head>
-    <body class="bg-dark">
+    <body
+        class="bg-dark"
+        data-bs-spy="scroll"
+        data-bs-target=".navbar"
+        data-bs-offset="70"
+        tabindex="0"
+    >
         <!-- NAVBAR FCB-->
-        <nav class="navbar bg-dark">
+        <nav class="navbar navbar-expand-lg blur-navbar fixed-top">
             <div class="container-fluid">
-                <a class="navbar-brand text-light fw-bold" href="index.html"
-                    >FCBarcelona</a
+                <img class="logo" src="./img/fcb-logo.png" alt="fcb-logo" />
+                <a class="navbar-brand text-light" href="#">FC Barcelona</a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
                 >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#porteros"
+                                >Porteros</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#defensas"
+                                >Defensas</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a
+                                class="nav-link text-light"
+                                href="#centrocampistas"
+                                >Centrocampistas</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#delanteros"
+                                >Delanteros</a
+                            >
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
         <!-- NAVBAR FCB-->
@@ -125,72 +164,371 @@
         <!-- CAROUSEL-->
 
         <!-- PLAYERS LIST-->
-        <main class="bg-dark text-light text-center py-4">
-            <h1 id="defensas" class="fw-bold text-light mb-4">#Defensas</h1>
+        <main class="bg-dark text-light text-center">
+            <!-- PORTEROS-->
+            <div class="porteros mb-5">
+                <h1 id="porteros" class="section-title fw-bold text-light mb-4">
+                    #Porteros
+                </h1>
 
-            <div class="d-flex flex-wrap justify-content-center gap-4">
-                <!-- PLAYER CARD -->
-                <div class="player-card">
-                    <div class="d-flex justify-content-center">
-                        <img
-                            class="img-player"
-                            src="./img/players/defensa/kounde.png"
-                            alt="Kounde"
-                        />
+                <div class="d-flex flex-wrap justify-content-center gap-4">
+                    <!-- PLAYER CARD -->
+                    <div
+                        class="player-card"
+                        data-name="Szczesny"
+                        data-info="Portero | Polonia"
+                        data-img="./img/players/porteros/szczesny.png"
+                    >
+                        <div class="d-flex justify-content-center">
+                            <img
+                                class="img-player"
+                                src="./img/players/porteros/szczesny.png"
+                                alt="Szczesny"
+                            />
+                        </div>
+                        <div class="card-body text-center">
+                            <p class="player-name mb-1 d-inline-block">
+                                Szczesny
+                            </p>
+                            <span
+                                class="badge bg-warning text-dark ms-2"
+                                data-bs-toggle="popover"
+                                data-bs-placement="top"
+                                data-bs-content="¡Nuevo fichaje!"
+                                onclick="event.stopPropagation();"
+                            >
+                                Nuevo Fichaje!
+                            </span>
+                            <hr />
+                            <small>Portero | Polonia</small>
+                        </div>
                     </div>
-                    <div class="card-body">
-                        <p>Joules Kounde</p>
-                        <hr />
-                        <small>Lateral Derecho | Francia </small>
-                    </div>
-                </div>
 
-                <div class="player-card">
-                    <div class="d-flex justify-content-center">
-                        <img
-                            class="img-player"
-                            src="./img/players/defensa/martinez.png"
-                            alt="Martinez"
-                        />
+                    <div
+                        class="player-card"
+                        data-name="Szczesny"
+                        data-info="Portero | Polonia"
+                        data-img="./img/players/porteros/szczesny.png"
+                    >
+                        <div class="d-flex justify-content-center">
+                            <img
+                                class="img-player"
+                                src="./img/players/porteros/szczesny.png"
+                                alt="Szczesny"
+                            />
+                        </div>
+                        <div class="card-body">
+                            <p class="player-name">Szczesny</p>
+                            <hr />
+                            <small>Portero | Polonia </small>
+                        </div>
                     </div>
-                    <div class="card-body">
-                        <p>Iñigo Martinez</p>
-                        <hr />
-                        <small>Defensa Central | España </small>
-                    </div>
-                </div>
 
-                <div class="player-card">
-                    <div class="d-flex justify-content-center">
-                        <img
-                            class="img-player"
-                            src="./img/players/defensa/cubarsi.png"
-                            alt="Cubarsi"
-                        />
-                    </div>
-                    <div class="card-body">
-                        <p>Pau Cubarsi</p>
-                        <hr />
-                        <small>Defensa Central | España </small>
-                    </div>
-                </div>
-
-                <div class="player-card">
-                    <div class="d-flex justify-content-center">
-                        <img
-                            class="img-player"
-                            src="./img/players/defensa/balde.png"
-                            alt="Balde"
-                        />
-                    </div>
-                    <div class="card-body">
-                        <p>Alejandro Balde</p>
-                        <hr />
-                        <small>Lateral Izquierdo | España </small>
+                    <div
+                        class="player-card"
+                        data-name="Szczesny"
+                        data-info="Portero | Polonia"
+                        data-img="./img/players/porteros/szczesny.png"
+                    >
+                        <div class="d-flex justify-content-center">
+                            <img
+                                class="img-player"
+                                src="./img/players/porteros/szczesny.png"
+                                alt="Szczesny"
+                            />
+                        </div>
+                        <div class="card-body">
+                            <p class="player-name">Szczesny</p>
+                            <hr />
+                            <small>Portero | Polonia </small>
+                        </div>
                     </div>
                 </div>
             </div>
+            <!-- PORTEROS-->
+
+            <!-- DEFENSAS-->
+            <div class="defensas mb-5">
+                <h1 id="defensas" class="section-title fw-bold text-light mb-4">
+                    #Defensas
+                </h1>
+
+                <div class="d-flex flex-wrap justify-content-center gap-4">
+                    <!-- PLAYER CARD -->
+                    <div
+                        class="player-card"
+                        data-name="Kounde"
+                        data-info="Lateral Derecho | Francia"
+                        data-img="./img/players/defensa/kounde.png"
+                    >
+                        <div class="d-flex justify-content-center">
+                            <img
+                                class="img-player"
+                                src="./img/players/defensa/kounde.png"
+                                alt="Kounde"
+                            />
+                        </div>
+                        <div class="card-body">
+                            <p class="player-name">Joules Kounde</p>
+                            <hr />
+                            <small>Lateral Derecho | Francia </small>
+                        </div>
+                    </div>
+
+                    <div
+                        class="player-card"
+                        data-name="Iñigo Martinez"
+                        data-info="Defensa Central | España"
+                        data-img="./img/players/defensa/martinez.png"
+                    >
+                        <div class="d-flex justify-content-center">
+                            <img
+                                class="img-player"
+                                src="./img/players/defensa/martinez.png"
+                                alt="Martinez"
+                            />
+                        </div>
+                        <div class="card-body">
+                            <p class="player-name">Iñigo Martinez</p>
+                            <hr />
+                            <small>Defensa Central | España </small>
+                        </div>
+                    </div>
+
+                    <div
+                        class="player-card"
+                        data-name="Pau Cubarsi"
+                        data-info="Defensa Central | España"
+                        data-img="./img/players/defensa/cubarsi.png"
+                    >
+                        <div class="d-flex justify-content-center">
+                            <img
+                                class="img-player"
+                                src="./img/players/defensa/cubarsi.png"
+                                alt="Cubarsi"
+                            />
+                        </div>
+                        <div class="card-body">
+                            <p class="player-name">Pau Cubarsi</p>
+                            <hr />
+                            <small>Defensa Central | España </small>
+                        </div>
+                    </div>
+
+                    <div
+                        class="player-card"
+                        data-name="Alejandro Balde"
+                        data-info="Lateral Izquierdo | España"
+                        data-img="./img/players/defensa/balde.png"
+                    >
+                        <div class="d-flex justify-content-center">
+                            <img
+                                class="img-player"
+                                src="./img/players/defensa/balde.png"
+                                alt="Balde"
+                            />
+                        </div>
+                        <div class="card-body">
+                            <p class="player-name">Alejandro Balde</p>
+                            <hr />
+                            <small>Lateral Izquierdo | España </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- DEFENSAS-->
+
+            <!-- MEDIOCAMPISTAS-->
+            <div class="mediocampistas mb-5">
+                <h1
+                    id="centrocampistas"
+                    class="section-title fw-bold text-light mb-4"
+                >
+                    #Centrocampistas
+                </h1>
+
+                <div class="d-flex flex-wrap justify-content-center gap-4">
+                    <!-- PLAYER CARD -->
+                    <div
+                        class="player-card"
+                        data-name="Pedri"
+                        data-info="Centrocampista | España"
+                        data-img="./img/players/mediocampo/pedri.png"
+                    >
+                        <div class="d-flex justify-content-center">
+                            <img
+                                class="img-player"
+                                src="./img/players/mediocampo/pedri.png"
+                                alt="Pedri"
+                            />
+                        </div>
+                        <div class="card-body">
+                            <p class="player-name">Pedri</p>
+                            <hr />
+                            <small>Centrocampista | España </small>
+                        </div>
+                    </div>
+
+                    <div
+                        class="player-card"
+                        data-name="De Jong"
+                        data-info="Centrocampista | Holanda"
+                        data-img="./img/players/mediocampo/dejong.png"
+                    >
+                        <div class="d-flex justify-content-center">
+                            <img
+                                class="img-player"
+                                src="./img/players/mediocampo/dejong.png"
+                                alt="Martinez"
+                            />
+                        </div>
+                        <div class="card-body">
+                            <p class="player-name">De Jong</p>
+                            <hr />
+                            <small>Centrocampista | Holanda </small>
+                        </div>
+                    </div>
+
+                    <div
+                        class="player-card"
+                        data-name="Gavi"
+                        data-info="Lateral Izquierdo | España"
+                        data-img="./img/players/mediocampo/gavi.png"
+                    >
+                        <div class="d-flex justify-content-center">
+                            <img
+                                class="img-player"
+                                src="./img/players/mediocampo/gavi.png"
+                                alt="Balde"
+                            />
+                        </div>
+                        <div class="card-body">
+                            <p class="player-name">Gavi</p>
+                            <hr />
+                            <small>Lateral Izquierdo | España </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- MEDIOCAMPISTAS-->
+
+            <!-- DELANTEROS-->
+            <div class="delanteros">
+                <h1
+                    id="delanteros"
+                    class="section-title fw-bold text-light mb-4"
+                >
+                    #Delanteros
+                </h1>
+
+                <div class="d-flex flex-wrap justify-content-center gap-4">
+                    <!-- PLAYER CARD -->
+                    <div
+                        class="player-card"
+                        data-name="Lamine Yamal"
+                        data-info="Extremo Derecho | España"
+                        data-img="./img/players/delanteros/yamal.png"
+                    >
+                        <div class="d-flex justify-content-center">
+                            <img
+                                class="img-player"
+                                src="./img/players/delanteros/yamal.png"
+                                alt="Lamine Yamal"
+                            />
+                        </div>
+                        <div class="card-body">
+                            <p class="player-name">Lamine Yamal</p>
+                            <hr />
+                            <small>Extremo Derecho| España</small>
+                        </div>
+                    </div>
+
+                    <div
+                        class="player-card"
+                        data-name="Lewandowski"
+                        data-info="Centrodelantero | Polonia"
+                        data-img="./img/players/delanteros/lewandowski.png"
+                    >
+                        <div class="d-flex justify-content-center">
+                            <img
+                                class="img-player"
+                                src="./img/players/delanteros/lewandowski.png"
+                                alt="lewandowski"
+                            />
+                        </div>
+                        <div class="card-body">
+                            <p class="player-name">Lewandowski</p>
+                            <hr />
+                            <small>Centrodelantero | Polonia </small>
+                        </div>
+                    </div>
+
+                    <div
+                        class="player-card"
+                        data-name="Raphinha"
+                        data-info="Extremo Izquierdo | Brasil"
+                        data-img="./img/players/delanteros/raphinha.png"
+                    >
+                        <div class="d-flex justify-content-center">
+                            <img
+                                class="img-player"
+                                src="./img/players/delanteros/raphinha.png"
+                                alt="Raphinha"
+                            />
+                        </div>
+                        <div class="card-body">
+                            <p class="player-name">Raphinha</p>
+                            <hr />
+                            <small>Extremo Izquierdo | Brasil </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- DELANTEROS-->
+
+            <!-- FOOTER -->
+            <footer class="footer-blur text-center text-light py-3 mt-5">
+                <small>&copy; 2025 Victor Salas | MASTERMIND</small>
+            </footer>
         </main>
+
+        <!-- MODAL JUGADOR -->
+        <div
+            class="modal fade"
+            id="playerModal"
+            tabindex="-1"
+            aria-labelledby="playerModalLabel"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content blur-background text-light">
+                    <div class="modal-header border-0">
+                        <h5 class="modal-title" id="playerModalLabel">
+                            Jugador del FC Barcelona 2025
+                        </h5>
+                        <button
+                            type="button"
+                            class="btn-close btn-close-white"
+                            data-bs-dismiss="modal"
+                            aria-label="Cerrar"
+                        ></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <h3 id="modalPlayerName" class="mb-3">
+                            Nombre del Jugador
+                        </h3>
+                        <img
+                            id="modalPlayerImg"
+                            src=""
+                            alt="Jugador"
+                            class="img-fluid mb-3"
+                            style="max-height: 300px; object-fit: contain"
+                        />
+                        <p id="modalPlayerInfo" class="fs-5"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- BootStrap-->
         <script
@@ -199,5 +537,38 @@
             crossorigin="anonymous"
         ></script>
         <!-- BootStrap-->
+
+        <!--JS-->
+        <script>
+            const playerCards = document.querySelectorAll(".player-card");
+            const modal = new bootstrap.Modal(
+                document.getElementById("playerModal")
+            );
+
+            playerCards.forEach((card) => {
+                card.addEventListener("click", () => {
+                    const name = card.getAttribute("data-name");
+                    const info = card.getAttribute("data-info");
+                    const img = card.getAttribute("data-img");
+
+                    document.getElementById("modalPlayerName").textContent =
+                        name;
+                    document.getElementById("modalPlayerInfo").textContent =
+                        info;
+                    document.getElementById("modalPlayerImg").src = img;
+
+                    modal.show();
+                });
+            });
+
+            document.addEventListener("DOMContentLoaded", function () {
+                const popoverTriggerList = document.querySelectorAll(
+                    '[data-bs-toggle="popover"]'
+                );
+                const popoverList = [...popoverTriggerList].map(
+                    (triggerEl) => new bootstrap.Popover(triggerEl)
+                );
+            });
+        </script>
     </body>
 </html>

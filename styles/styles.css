@@ -1,19 +1,126 @@
 body {
-    font-family: "Comic Neue";
+    font-family: "Montserrat", sans-serif;
 }
 
-/* CARD */
-.player-card {
-    background-color: #101112;
-    border: 3px solid #f5f5f5;
-    width: 15rem;
+main {
+    background: #200122; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+        to right,
+        #6f0000,
+        #200122
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+        to right,
+        #6f0000,
+        #200122
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+/* NAVBAR */
+.logo {
+    height: 30px;
+    align-items: center;
+    margin-right: 5px;
+}
+
+.blur-navbar {
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 1050;
+}
+
+.nav-link:hover {
+    color: #ffc107 !important;
+}
+
+.navbar .nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-link.active {
+    color: #ffc107 !important;
+    font-weight: bold;
+}
+
+.navbar .nav-link.active::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #ffc107;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+/*SECTIONS*/
+.section-title {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 0.5rem;
+    width: 100%;
     text-align: center;
+}
+/* CARD */
+
+.player-card {
+    background: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente */
+    backdrop-filter: blur(10px); /* Efecto blur */
+    -webkit-backdrop-filter: blur(10px); /* Soporte para Safari */
     border-radius: 1rem;
     padding: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 220px;
+}
+
+.player-card:hover {
+    cursor: pointer;
+}
+
+hr {
+    margin: 5px;
 }
 
 /* IMG */
 .img-player {
     height: 18rem;
     object-fit: contain;
+}
+
+/* NOMBRE */
+.player-name {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+/* MODAL */
+
+.modal-content {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.blur-background {
+    background: rgba(0, 0, 0, 0.4); /* Fondo negro con transparencia */
+    backdrop-filter: blur(10px); /* Difuminado */
+    -webkit-backdrop-filter: blur(10px); /* Para Safari */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Opcional: bordecito tenue */
+}
+
+/* FOOTER */
+.footer-blur {
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
